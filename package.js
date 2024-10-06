@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'jorgenvatle:relay',
+  name: 'jorgenvatle:zodern-relay',
   version: '1.1.1',
   // Brief, one-line summary of the package.
   summary: 'A Meteor v3 compatible fork of zodern:relay',
