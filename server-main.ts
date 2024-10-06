@@ -334,10 +334,10 @@ export function createPublication<S extends z.ZodTypeAny, T>(
       const result = await run(0, parsed);
 
       onResult.forEach(cb => {
-        cb(result.output);
+        cb(result?.output);
       });
 
-      return result.forwardOutput ? result.output : undefined;
+      return result?.forwardOutput ? result.output : undefined;
     } catch(error) {
       error = onError.reduce((err, callback) => {
         return callback(err) ?? err;
