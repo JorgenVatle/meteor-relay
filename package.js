@@ -19,21 +19,3 @@ Package.onUse(function(api) {
   api.mainModule('client-main.ts', 'client');
 });
 
-Package.onTest(function(api) {
-  api.use('ecmascript');
-  api.use('typescript');
-  api.use('tinytest');
-  api.use('mongo');
-  api.use('zodern:relay');
-  api.addFiles([
-    'tests/methods/index.js',
-    'tests/publications/index.js',
-  ], 'server');
-  api.addFiles([
-    'tests/method-tests.js',
-  ]);
-  api.addFiles([
-  'tests/publication-tests.js',
-  ], 'client');
-});
-
